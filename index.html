@@ -1,17 +1,252 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nick Novotny</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick Novotny - Tech Help & Support</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div style="text-align:center; padding:50px;">
-        <h1>Hello, I'm Nick Novotny</h1>
-        <p>Solutions Architect • Backend Engineer • AI Explorer</p>
-        <img src="logo.png" alt="NN Logo" width="120" />
-        <p><a href="mailto:nick@example.com">📫 Contact Me</a></p>
+    <!-- Edit Mode Toggle -->
+    <div class="edit-controls">
+        <button id="editToggle" class="edit-toggle-btn">
+            <i class="fas fa-edit"></i>
+            <span>Edit Mode</span>
+        </button>
+        <button id="saveChanges" class="save-btn" style="display: none;">
+            <i class="fas fa-save"></i>
+            <span>Save Changes</span>
+        </button>
     </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo-container">
+                <img src="logo.svg" alt="Logo" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="editable" data-field="hero-title">👋 Need Help With Your Tech? I've Got You Covered.</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    <span class="editable" data-field="hero-subtitle">Hi, I'm Nick Novotny</span>
+                </h2>
+                <p class="hero-description">
+                    <span class="editable" data-field="hero-description">I've worked in software and technology for over 10 years, and now I help people figure out tech problems without the stress. If your computer, phone, printer, email, Wi-Fi, or anything else isn't working the way it should — I can help.</span>
+                </p>
+                <div class="hero-callout">
+                    <p>Before you call your son, niece, or neighbor who "knows computers," reach out to me. I'll explain things clearly, fix the issue if I can, or at least set you up to get it fixed — no tech talk, no pressure.</p>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#skills" class="btn btn-primary">See What I Help With</a>
+                    <a href="#contact" class="btn btn-secondary">Get Help Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">🤝 Why People Like Working With Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <h3>Plain English Communication</h3>
+                            <p>I speak in plain English — not "tech lingo"</p>
+                        </div>
+                        <div class="benefit-item">
+                            <h3>Patient & Thorough</h3>
+                            <p>I'm patient and thorough with every problem</p>
+                        </div>
+                        <div class="benefit-item">
+                            <h3>No Question Too Small</h3>
+                            <p>You can ask any question — big or small</p>
+                        </div>
+                        <div class="benefit-item">
+                            <h3>No Condescension</h3>
+                            <p>I won't talk down to you or make things complicated</p>
+                        </div>
+                        <div class="benefit-item">
+                            <h3>Genuine Care</h3>
+                            <p>I care more about helping you than upselling you</p>
+                        </div>
+                        <div class="benefit-item">
+                            <h3>Stress-Free Approach</h3>
+                            <p>If you're feeling stuck or overwhelmed — I'm here to help</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">🛠️ Common Things I Help With</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3 class="editable" data-field="skill-1-title">Computer Issues</h3>
+                    <p class="editable" data-field="skill-1-desc">Computer running slow or freezing, troubleshooting performance problems</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h3 class="editable" data-field="skill-2-title">Printing & Wi-Fi</h3>
+                    <p class="editable" data-field="skill-2-desc">Trouble printing or connecting to Wi-Fi networks</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="editable" data-field="skill-3-title">Device Setup</h3>
+                    <p class="editable" data-field="skill-3-desc">Setting up new devices (laptop, tablet, smartphone)</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="editable" data-field="skill-4-title">Email Problems</h3>
+                    <p class="editable" data-field="skill-4-desc">Email not sending or receiving, account setup issues</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="editable" data-field="skill-5-title">Security & Scams</h3>
+                    <p class="editable" data-field="skill-5-desc">Pop-ups, strange messages, understanding security and password issues</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-save"></i>
+                    </div>
+                    <h3 class="editable" data-field="skill-6-title">File Management</h3>
+                    <p class="editable" data-field="skill-6-desc">Backing up important files and photos, organizing systems</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <h3 class="editable" data-field="skill-7-title">System Cleanup</h3>
+                    <p class="editable" data-field="skill-7-desc">Organizing apps or cleaning up a cluttered system</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="editable" data-field="skill-8-title">Video Calls</h3>
+                    <p class="editable" data-field="skill-8-desc">Getting Zoom or video calls working smoothly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">👉 Ready to Get Help?</h2>
+            <div class="cta-content">
+                <div class="cta-message">
+                    <h3>No problem is too small. Just reach out.</h3>
+                    <p>If you're feeling stuck, overwhelmed, or just need someone who can take care of the tech side of things — I'm here to help.</p>
+                    <p>Whether it's a quick question or a bigger tech challenge, I'll work with you to get things sorted out clearly and without stress.</p>
+                </div>
+                <div class="contact-preview">
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <span>Call or Text</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-video"></i>
+                            <span>Video Call</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Ready to Get Your Tech Working?</h3>
+                    <p class="editable" data-field="contact-description">
+                        Don't let tech problems stress you out. Reach out and I'll help you get everything working smoothly again.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span class="editable" data-field="email">nick@techhelp.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span class="editable" data-field="phone">+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="editable" data-field="location">Available Remotely & Locally</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link editable" data-field="linkedin-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link editable" data-field="facebook-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link editable" data-field="twitter-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link editable" data-field="youtube-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> <span class="editable" data-field="footer-name">Nick Novotny</span>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
